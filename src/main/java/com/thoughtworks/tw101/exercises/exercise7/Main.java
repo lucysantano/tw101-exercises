@@ -8,5 +8,13 @@ public class Main {
 
     public static void main(String[] args) {
 
+        RandomNumber number = new RandomNumber();
+        User user = new User();
+        boolean correctGuess = false;
+        while (!correctGuess) {
+            user.guess();
+            correctGuess = user.checkGuess(number.getValue());
+        }
+
     }
 }
