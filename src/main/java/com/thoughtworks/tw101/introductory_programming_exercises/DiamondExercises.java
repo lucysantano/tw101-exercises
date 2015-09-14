@@ -2,9 +2,9 @@ package com.thoughtworks.tw101.introductory_programming_exercises;
 
 public class DiamondExercises {
     public static void main(String[] args) {
-        //drawAnIsoscelesTriangle(3);
-        drawADiamond(8);
-        //drawADiamondWithYourName(3);
+        drawAnIsoscelesTriangle(3);
+        drawADiamond(7);
+        drawADiamondWithYourName(3);
     }
 
 //    Isosceles Triangle
@@ -13,7 +13,16 @@ public class DiamondExercises {
 //             ***
 //            *****
     private static void drawAnIsoscelesTriangle(int n) {
-
+        int i,j,k;
+        for(i=0; i<n; i++){
+            for(j=0; j<n-1-i; j++) {
+                System.out.print(" ");
+            }
+            for(k=0; k<n-j+i; k++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
     }
 
 //    Diamond
@@ -24,7 +33,25 @@ public class DiamondExercises {
 //             ***
 //              *
     private static void drawADiamond(int n) {
-
+        int i,j,k;
+        for(i=0; i<n; i++){
+            for(j=0; j<n-1-i; j++) {
+                System.out.print(" ");
+            }
+            for(k=0; k<n-j+i; k++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        for(i=n-1; i>0; i--){
+            for(j=0; j<n-i; j++) {
+                System.out.print(" ");
+            }
+            for(k=0; k<n-j+i-1; k++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
     }
 
@@ -37,6 +64,26 @@ public class DiamondExercises {
 //            ***
 //             *
     private static void drawADiamondWithYourName(int n) {
+        int i,j,k;
+        for(i=0; i<n-1; i++){
+            for(j=0; j<n-1-i; j++) {
+                System.out.print(" ");
+            }
+            for(k=0; k<n-j+i; k++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
+        System.out.println("Lucy");
+        for(i=n-1; i>0; i--){
+            for(j=0; j<n-i; j++) {
+                System.out.print(" ");
+            }
+            for(k=0; k<n-j+i-1; k++){
+                System.out.print("*");
+            }
+            System.out.println("");
+        }
 
     }
 }
